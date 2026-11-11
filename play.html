@@ -1,0 +1,52 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Play · The Moon Medium</title>
+<meta name="description" content="The bowl table: strike and sing crystal or Himalayan singing bowls in your browser, with a mallet that follows your hand.">
+<meta name="theme-color" content="#0D0E13">
+<link rel="icon" href="assets/img/moon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&amp;family=Jost:wght@300;400;500&amp;display=swap">
+<link rel="stylesheet" href="assets/css/base.css"><link rel="stylesheet" href="assets/css/radtech-credit.css"><link rel="stylesheet" href="assets/css/play.css">
+</head><body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header"><div class="wrap">
+<a class="brand" href="index.html" aria-label="The Moon Medium, home"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="13" fill="none" stroke="#CDA56A" stroke-width="1"/><circle cx="15" cy="15" r="9" fill="#F3EDE2"/><circle cx="19" cy="13" r="8.5" fill="#0D0E13"/></svg><span>The Moon Medium</span><i class="sound-dot" aria-hidden="true"></i></a>
+<nav class="nav" aria-label="Main"><a href="index.html">Listen</a><a href="play.html" aria-current="page">Play</a><a href="instruments.html">Instruments</a><a href="purnima.html">Purnima</a><a class="cta" href="lessons.html">Book</a></nav>
+</div></header>
+<main id="main">
+
+<section class="wrap play">
+  <div class="play-head">
+    <h1>The bowl <em>table.</em></h1>
+    <div class="chips" role="group" aria-label="Bowl set">
+      <button class="chip" type="button" data-set="crystal" aria-pressed="true">Crystal</button>
+      <button class="chip" type="button" data-set="himalayan" aria-pressed="false">Himalayan</button>
+    </div>
+  </div>
+
+  <div class="stage">
+    <div class="bowl-table" id="bowl-table">
+      <canvas id="bowls" role="img" aria-label="Five singing bowls on a round rug, with a wooden mallet. Keys 1 to 5 strike them, Shift with a number sings the rim, Escape stops."></canvas>
+    </div>
+    <div class="table-copy">
+      <p class="status" id="bowl-status" aria-live="polite" aria-atomic="true">Crystal set</p>
+      <p class="hint">Tap a bowl to strike. Circle the rim steadily to make it sing. <span class="keys-hint">Keys 1 to 5.</span></p>
+    </div>
+  </div>
+
+  <div class="play-foot">
+    <div class="chips keys" role="group" aria-label="Strike a bowl">
+      <button class="chip" type="button" data-bowl="0"><span class="sr-only">Strike bowl </span>1 <span aria-hidden="true">·</span> <span class="n">C4</span></button>
+      <button class="chip" type="button" data-bowl="1"><span class="sr-only">Strike bowl </span>2 <span aria-hidden="true">·</span> <span class="n">D4</span></button>
+      <button class="chip" type="button" data-bowl="2"><span class="sr-only">Strike bowl </span>3 <span aria-hidden="true">·</span> <span class="n">E4</span></button>
+      <button class="chip" type="button" data-bowl="3"><span class="sr-only">Strike bowl </span>4 <span aria-hidden="true">·</span> <span class="n">G4</span></button>
+      <button class="chip" type="button" data-bowl="4"><span class="sr-only">Strike bowl </span>5 <span aria-hidden="true">·</span> <span class="n">A4</span></button>
+    </div>
+    <button class="chip drone" id="drone" type="button" aria-pressed="false">Hold a drone</button>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer"><div class="wrap"><p>Sound healing is complementary care, not a replacement for medical treatment.</p><p><a href="https://www.instagram.com/the_moon_medium/">@the_moon_medium</a> · <a href="mailto:purnima@themoonmedium.ca">purnima@themoonmedium.ca</a> · Windsor-Essex, Ontario</p><div class="rt-credit"><a class="rt-link" href="https://radtech.nl" rel="noopener"><span class="rt-horizon" aria-hidden="true"><span class="rt-rule"></span><svg class="rt-mill" viewBox="0 0 30 40" width="30" height="40" focusable="false"><path class="rt-tower" d="M12.5 20h5l2.5 16h-10z"/><g class="rt-blades"><rect x="13.5" y="6" width="3" height="20" rx="1.5" transform="rotate(45 15 16)"/><rect x="13.5" y="6" width="3" height="20" rx="1.5" transform="rotate(135 15 16)"/></g><circle class="rt-tower" cx="15" cy="16" r="4"/></svg><span class="rt-rule"></span></span><span class="rt-lines"><span class="rt-line1">Designed by <b class="rt-word"><span class="rt-rad">Rad</span><span class="rt-tech">Tech</span></b></span> <span class="rt-line2">with <svg class="rt-heart" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21s-7.5-4.6-9.6-9.3C.9 8.3 3 4.5 6.7 4.5c2.2 0 3.6 1.2 5.3 3.2 1.7-2 3.1-3.2 5.3-3.2 3.7 0 5.8 3.8 4.3 7.2C19.5 16.4 12 21 12 21Z"/></svg><span class="rt-sr">love</span> in Amsterdam</span></span></a></div></div></footer>
+<script src="assets/js/audio.js" defer></script><script src="assets/js/site.js" defer></script><script src="assets/js/play.js" defer></script>
+</body></html>

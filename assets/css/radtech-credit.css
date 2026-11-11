@@ -1,0 +1,60 @@
+/* RadTech maker credit, option E "horizon": a windmill standing on a hairline,
+   two centred lines below. Drop the markup from radtech-credit.html into any
+   footer and link this file after the site's own CSS. Text inherits the host
+   font. Set data-theme="light" on .rt-credit for light footers, or override
+   the --rt-* variables to match a site's palette. */
+.rt-credit {
+  --rt-text: #A3A9B2;
+  --rt-text-hover: #EDEAE4;
+  --rt-muted: #8A909A;
+  --rt-rule: rgba(237, 234, 228, .18);
+  --rt-tower: #D9D4CB;
+  --rt-blade: #F0A95B;
+  --rt-rad: #7FD8C6;
+  --rt-tech: #F0A95B;
+  --rt-heart: #E5484D;
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.4;
+  font-style: normal;
+  letter-spacing: normal;
+  text-transform: none;
+}
+.rt-credit[data-theme="light"] {
+  --rt-text: #5B616B;
+  --rt-text-hover: #15171C;
+  --rt-muted: #5B616B;
+  --rt-rule: rgba(21, 23, 28, .16);
+  --rt-tower: #3A3F47;
+  --rt-blade: #C9781F;
+  --rt-rad: #11786A;
+  --rt-tech: #A8590F;
+}
+.rt-credit a.rt-link { position: relative; display: flex; flex-direction: column; align-items: center; gap: 12px; min-height: 44px; padding: 4px 0; color: var(--rt-text); text-decoration: none; transition: color .3s; }
+.rt-credit a.rt-link:hover { color: var(--rt-text-hover); }
+.rt-credit a.rt-link:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; border-radius: 4px; }
+.rt-credit a.rt-link::before, .rt-credit a.rt-link::after { content: none; }
+.rt-credit .rt-horizon { display: flex; align-items: flex-end; gap: 16px; width: 100%; }
+.rt-credit .rt-rule { flex: 1; height: 1px; margin-bottom: 4px; background: var(--rt-rule); }
+.rt-credit .rt-mill { display: block; flex: none; width: 30px; height: 40px; }
+.rt-credit .rt-mill .rt-tower { fill: var(--rt-tower); }
+.rt-credit .rt-blades rect { fill: var(--rt-blade); }
+/* Dutch mills turn counter-clockwise. */
+.rt-credit .rt-blades { transform-origin: 15px 16px; transform-box: view-box; animation: rt-spin 7s linear infinite; }
+.rt-credit .rt-lines { display: flex; flex-direction: column; gap: 4px; }
+.rt-credit .rt-line1 { font-size: 13px; }
+.rt-credit .rt-word { font-family: var(--rt-word-font, inherit); font-weight: 600; letter-spacing: 0; text-transform: none; }
+.rt-credit .rt-rad { color: var(--rt-rad); }
+.rt-credit .rt-tech { color: var(--rt-tech); }
+.rt-credit .rt-line2 { font-size: 10px; letter-spacing: .26em; text-transform: uppercase; color: var(--rt-muted); }
+.rt-credit .rt-heart { display: inline-block; width: 1.15em; height: 1.15em; margin: 0 .25em; vertical-align: -.22em; }
+.rt-credit .rt-heart path { fill: var(--rt-heart); }
+.rt-credit .rt-sr { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; border: 0; }
+@keyframes rt-spin { to { transform: rotate(-360deg); } }
+@media (prefers-reduced-motion: reduce) { .rt-credit .rt-blades { animation: none; } }
+@media (forced-colors: active) {
+  .rt-credit .rt-heart path, .rt-credit .rt-mill .rt-tower, .rt-credit .rt-blades rect { fill: CanvasText; }
+  .rt-credit .rt-rule { background: none; border-top: 1px solid CanvasText; }
+}

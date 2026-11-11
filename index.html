@@ -1,0 +1,168 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Listen · The Moon Medium</title>
+<meta name="description" content="Purnima, Naad Yogini and sound healer in Windsor-Essex, Ontario. Tune a healing frequency, open the Listening Room, or join an upcoming sound bath.">
+<meta name="theme-color" content="#0D0E13">
+<link rel="icon" href="assets/img/moon.svg" type="image/svg+xml">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&amp;family=Jost:wght@300;400;500&amp;display=swap">
+<link rel="stylesheet" href="assets/css/base.css"><link rel="stylesheet" href="assets/css/radtech-credit.css"><link rel="stylesheet" href="assets/css/home.css">
+</head><body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header"><div class="wrap">
+<a class="brand" href="index.html" aria-label="The Moon Medium, home"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="13" fill="none" stroke="#CDA56A" stroke-width="1"/><circle cx="15" cy="15" r="9" fill="#F3EDE2"/><circle cx="19" cy="13" r="8.5" fill="#0D0E13"/></svg><span>The Moon Medium</span><i class="sound-dot" aria-hidden="true"></i></a>
+<nav class="nav" aria-label="Main"><a href="index.html">Listen</a><a href="play.html">Play</a><a href="instruments.html">Instruments</a><a href="purnima.html">Purnima</a><a class="cta" href="lessons.html">Book</a></nav>
+</div></header>
+<main id="main">
+
+<section class="wrap grid12 hero">
+  <div class="hero-copy">
+    <p class="eyebrow">Naad Yoga · Sound healing · Windsor-Essex</p>
+    <h1>Come as<br>you are.<br><em>Leave feeling<br>lighter.</em></h1>
+    <div class="btns">
+      <a class="btn btn-primary" href="play.html">Play the bowls</a>
+      <a class="btn" href="#fader">Tune a frequency</a>
+    </div>
+  </div>
+  <div class="hero-media">
+    <img class="photo hero-photo" src="assets/img/ig/portrait/098.webp" srcset="assets/img/ig/portrait/098-s.webp 451w, assets/img/ig/portrait/098.webp 640w" sizes="(max-width: 859px) 100vw, 40vw" width="640" height="1136" alt="Purnima playing crystal singing bowls in front of a gong" loading="eager" fetchpriority="high" decoding="async">
+    <button class="moon" id="moon" type="button" aria-label="Strike a bowl at 528 Hz">
+      <svg viewBox="0 0 420 420" aria-hidden="true">
+        <defs>
+          <clipPath id="moon-clip"><circle cx="210" cy="210" r="120"/></clipPath>
+          <radialGradient id="earthshine" cx="38%" cy="46%" r="62%"><stop offset="0" stop-color="#1A1C24"/><stop offset=".6" stop-color="#121319"/><stop offset="1" stop-color="#0D0E13"/></radialGradient>
+        </defs>
+        <circle class="ring" cx="210" cy="210" r="206" fill="none" stroke="#CDA56A" stroke-opacity=".6" stroke-width="3"/>
+        <circle class="ring" cx="210" cy="210" r="178" fill="none" stroke="#CDA56A" stroke-opacity=".22" stroke-width="2"/>
+        <circle class="ring" cx="210" cy="210" r="152" fill="none" stroke="#CDA56A" stroke-opacity=".14" stroke-width="2"/>
+        <g class="ripples" fill="none" stroke="#CDA56A">
+          <circle cx="210" cy="210" r="122" opacity="0"/><circle cx="210" cy="210" r="122" opacity="0"/><circle cx="210" cy="210" r="122" opacity="0"/>
+        </g>
+        <circle class="glow" cx="210" cy="210" r="132" fill="#CDA56A" opacity="0"/>
+        <circle class="disc" cx="210" cy="210" r="120" fill="#F3EDE2"/>
+        <circle class="shade" cx="252" cy="196" r="114" fill="url(#earthshine)" clip-path="url(#moon-clip)" opacity=".9"/>
+        <circle class="dash" cx="210" cy="210" r="140" fill="none" stroke="#CDA56A" stroke-width="2" stroke-dasharray="3 14"/>
+      </svg>
+    </button>
+    <p class="tap" aria-hidden="true">Tap the moon</p>
+  </div>
+</section>
+
+<section class="band-teal" id="fader">
+  <div class="wrap grid12 section fader">
+    <div class="fader-intro stack">
+      <p class="numeral" aria-hidden="true">i.</p>
+      <h2>Slide to a tone.</h2>
+      <p class="lede">Hear it. Read what it carries.</p>
+    </div>
+    <div class="fader-main">
+      <div class="fader-head">
+        <p class="big"><label class="sr-only" for="hz-num">Frequency in hertz</label><input id="hz-num" type="number" min="20" max="1000" step="1" value="528" inputmode="numeric"><span>Hz</span></p>
+        <button class="play" id="play" type="button" aria-pressed="false" aria-label="Play tone">
+          <svg class="i-play" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4 L20 12 L7 20 Z" fill="currentColor"/></svg>
+          <svg class="i-stop" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><rect x="4" y="4" width="12" height="12" rx="1" fill="currentColor"/></svg>
+        </button>
+      </div>
+
+      <div class="slider">
+        <label for="hz" class="label">Frequency · 20 to 1000 Hz</label>
+        <input id="hz" type="range" min="0" max="1000" step="1" value="837" aria-valuetext="528 Hz">
+        <div class="ticks" aria-hidden="true"><span>20</span><span>100</span><span>250</span><span>500</span><span>1000</span></div>
+      </div>
+
+      <div class="presets" role="group" aria-label="Solfeggio presets">
+        <button class="pill" type="button" data-hz="174">174</button><button class="pill" type="button" data-hz="285">285</button><button class="pill" type="button" data-hz="396">396</button><button class="pill" type="button" data-hz="417">417</button><button class="pill" type="button" data-hz="432">432</button><button class="pill" type="button" data-hz="528">528</button><button class="pill" type="button" data-hz="639">639</button><button class="pill" type="button" data-hz="741">741</button><button class="pill" type="button" data-hz="852">852</button><button class="pill" type="button" data-hz="888">888</button><button class="pill" type="button" data-hz="963">963</button>
+      </div>
+
+      <div class="readout" id="readout">
+        <h3 id="r-title" class="label">528 Hz, the transformation tone</h3>
+        <p id="r-text" class="r-text"></p>
+        <dl class="facts">
+          <div><dt>Band</dt><dd id="f-band"></dd></div>
+          <div><dt>Note</dt><dd id="f-note"></dd></div>
+          <div><dt>Chakra</dt><dd id="f-chakra"></dd></div>
+          <div><dt>Wavelength</dt><dd id="f-wave"></dd></div>
+        </dl>
+        <p class="sr-only" id="r-live" aria-live="polite" aria-atomic="true"></p>
+      </div>
+
+      <div class="controls">
+        <label class="ctl">Volume <input id="vol" type="range" min="0" max="100" value="40"></label>
+        <label class="ctl check"><input id="bin" type="checkbox"> Binaural</label>
+        <label class="ctl"><span class="sr-only">Binaural beat</span>
+          <select id="beat" class="input sel"><option value="2">2 Hz delta</option><option value="6" selected>6 Hz theta</option><option value="10">10 Hz alpha</option></select>
+        </label>
+        <p class="ctl note"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 10V8a6 6 0 0 1 12 0v2M2 10h3v4H2zM11 10h3v4h-3z" fill="none" stroke="currentColor" stroke-width="1.3"/></svg>Headphones for binaural. Traditional associations, not medical claims.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap grid12 section table">
+  <figure class="frame reveal table-photo">
+    <img class="photo" src="assets/img/ig/portrait/046.webp" srcset="assets/img/ig/portrait/046-s.webp 480w, assets/img/ig/portrait/046.webp 900w" sizes="(max-width: 859px) 100vw, 50vw" width="900" height="1200" alt="Purnima seated in a circle of Himalayan singing bowls" loading="lazy" decoding="async">
+  </figure>
+  <div class="table-copy stack">
+    <p class="numeral" aria-hidden="true">ii.</p>
+    <h2>The bowl table.</h2>
+    <p class="lede">Five bowls, one mallet. Strike, or circle the rim until it sings.</p>
+    <a class="tlink" href="play.html">Pick up the mallet</a>
+  </div>
+</section>
+
+<section class="rule-top" id="room">
+  <div class="wrap grid12 section room">
+    <div class="room-copy stack">
+      <p class="numeral" aria-hidden="true">iii.</p>
+      <h2>The listening room.</h2>
+      <div class="moods" role="group" aria-label="Mood">
+        <button type="button" class="mood" data-mood="full" aria-pressed="true">Full moon</button>
+        <button type="button" class="mood" data-mood="new" aria-pressed="false">New moon</button>
+        <button type="button" class="mood" data-mood="rest" aria-pressed="false">Deep rest</button>
+      </div>
+      <div class="room-row">
+        <button class="btn btn-primary" id="begin" type="button">Begin listening</button>
+        <label class="ctl">Sleep timer
+          <select id="timer" class="input sel"><option value="0">Off</option><option value="10">10 min</option><option value="20">20 min</option><option value="45">45 min</option></select>
+        </label>
+        <span class="countdown" id="countdown"></span>
+      </div>
+      <p class="room-meta" id="mood-line">Drone 108 Hz · crystal bowls · chimes on the breeze</p>
+      <p class="room-meta now" id="now"><span>Now</span> <span id="now-text">silence</span></p>
+    </div>
+    <figure class="frame reveal room-photo">
+      <img class="photo" src="assets/img/ig/space/080.webp" srcset="assets/img/ig/space/080-s.webp 450w, assets/img/ig/space/080.webp 787w" sizes="(max-width: 859px) 100vw, 50vw" width="787" height="1400" alt="Candlelit crystal bowls before a gong" loading="lazy" decoding="async">
+    </figure>
+  </div>
+</section>
+
+<section class="wrap section gatherings" aria-labelledby="g-title">
+  <div class="g-head">
+    <h2 id="g-title">Gatherings</h2>
+    <a class="tlink" href="purnima.html#gatherings">All past sound baths</a>
+  </div>
+  <ul class="posters">
+    <li class="reveal"><a class="frame" href="purnima.html#gatherings"><img class="photo" src="assets/img/ig/poster/002.webp" srcset="assets/img/ig/poster/002-s.webp 480w, assets/img/ig/poster/002.webp 900w" sizes="(max-width: 859px) 50vw, 25vw" width="900" height="1200" alt="Cocoon, an aerial sound bath, poster" loading="lazy" decoding="async"></a></li>
+    <li class="reveal"><a class="frame" href="purnima.html#gatherings"><img class="photo" src="assets/img/ig/poster/012.webp" srcset="assets/img/ig/poster/012-s.webp 480w, assets/img/ig/poster/012.webp 900w" sizes="(max-width: 859px) 50vw, 25vw" width="900" height="1095" alt="Karmic Release, astrology and sound healing, poster" loading="lazy" decoding="async"></a></li>
+    <li class="reveal"><a class="frame" href="purnima.html#gatherings"><img class="photo" src="assets/img/ig/poster/067.webp" srcset="assets/img/ig/poster/067-s.webp 480w, assets/img/ig/poster/067.webp 900w" sizes="(max-width: 859px) 50vw, 25vw" width="900" height="1125" alt="Equinox Exhale, restorative yoga and sound healing, poster" loading="lazy" decoding="async"></a></li>
+    <li class="reveal"><a class="frame" href="purnima.html#gatherings"><img class="photo" src="assets/img/ig/poster/103.webp" srcset="assets/img/ig/poster/103-s.webp 480w, assets/img/ig/poster/103.webp 900w" sizes="(max-width: 859px) 50vw, 25vw" width="900" height="900" alt="The Sleep Sanctuary sound bath poster" loading="lazy" decoding="async"></a></li>
+  </ul>
+
+  <div class="upcoming">
+    <div class="g-head">
+      <p class="eyebrow">Upcoming</p>
+      <a class="btn btn-primary" href="lessons.html">Book a session</a>
+    </div>
+    <ul class="ev-list">
+      <li><span class="ev-date">Nov 21 · 5:00 and 6:30 PM</span><span class="ev-name">Cocoon: an aerial sound bath</span><span class="ev-where">Breathe Pilates and Yoga, Walkerville · $55</span></li>
+      <li><span class="ev-date">Dec 4 · 7:00 to 8:30 PM</span><span class="ev-name">Theta sound healing and head massage</span><span class="ev-where">499 Notre Dame St, Belle River · $55</span></li>
+      <li><span class="ev-date">Recurring</span><span class="ev-name">Healing soundbath, Stoney Point</span><span class="ev-where">Club d'Âge d'Or · $30</span></li>
+    </ul>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer"><div class="wrap"><p>Sound healing is complementary care, not a replacement for medical treatment.</p><p><a href="https://www.instagram.com/the_moon_medium/">@the_moon_medium</a> · <a href="mailto:purnima@themoonmedium.ca">purnima@themoonmedium.ca</a> · Windsor-Essex, Ontario</p><div class="rt-credit"><a class="rt-link" href="https://radtech.nl" rel="noopener"><span class="rt-horizon" aria-hidden="true"><span class="rt-rule"></span><svg class="rt-mill" viewBox="0 0 30 40" width="30" height="40" focusable="false"><path class="rt-tower" d="M12.5 20h5l2.5 16h-10z"/><g class="rt-blades"><rect x="13.5" y="6" width="3" height="20" rx="1.5" transform="rotate(45 15 16)"/><rect x="13.5" y="6" width="3" height="20" rx="1.5" transform="rotate(135 15 16)"/></g><circle class="rt-tower" cx="15" cy="16" r="4"/></svg><span class="rt-rule"></span></span><span class="rt-lines"><span class="rt-line1">Designed by <b class="rt-word"><span class="rt-rad">Rad</span><span class="rt-tech">Tech</span></b></span> <span class="rt-line2">with <svg class="rt-heart" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21s-7.5-4.6-9.6-9.3C.9 8.3 3 4.5 6.7 4.5c2.2 0 3.6 1.2 5.3 3.2 1.7-2 3.1-3.2 5.3-3.2 3.7 0 5.8 3.8 4.3 7.2C19.5 16.4 12 21 12 21Z"/></svg><span class="rt-sr">love</span> in Amsterdam</span></span></a></div></div></footer>
+<script src="assets/js/audio.js" defer></script><script src="assets/js/site.js" defer></script><script src="assets/js/home.js" defer></script>
+</body></html>

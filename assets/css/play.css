@@ -1,0 +1,57 @@
+/* Play: the bowl table. */
+.play {
+  --iv: var(--ivory, #F3EDE2);
+  --iv2: var(--ivory-2, #DCD5C8);
+  --br: var(--brass, #CDA56A);
+  --ctl: rgba(243, 237, 226, .38);
+  display: flex; flex-direction: column; gap: 28px;
+  padding-block: 24px clamp(56px, 8vw, 104px);
+  font-family: Jost, system-ui, sans-serif; font-weight: 300;
+}
+.play-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 20px 24px; }
+.play h1 { font: 400 clamp(52px, 8vw, 84px)/.95 "Bodoni Moda", Georgia, serif; letter-spacing: -.02em; color: var(--iv); }
+.play h1 em { color: var(--br); }
+
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip {
+  min-height: 44px; padding: 0 20px; border-radius: 999px;
+  border: 1px solid var(--ctl); background: transparent; color: var(--iv);
+  font: 400 14px/1 Jost, system-ui, sans-serif; letter-spacing: .02em; white-space: nowrap;
+  transition: border-color .5s ease, background-color .5s ease;
+}
+.chip:hover { border-color: rgba(243, 237, 226, .64); }
+.chip[aria-pressed="true"] { border-color: var(--br); background: rgba(205, 165, 106, .1); }
+.chip:active { background: rgba(243, 237, 226, .06); }
+
+.stage { position: relative; }
+.bowl-table { position: relative; aspect-ratio: 16 / 9; min-height: 440px; background: var(--teal, #10302F); border-radius: 2px; overflow: hidden; }
+.bowl-table canvas {
+  position: absolute; inset: 0; width: 100%; height: 100%; display: block;
+  cursor: none; touch-action: none; user-select: none; -webkit-user-select: none;
+  -webkit-touch-callout: none; -webkit-tap-highlight-color: transparent;
+}
+.table-copy { position: absolute; left: 32px; bottom: 28px; display: flex; flex-direction: column; gap: 6px; max-width: 46ch; pointer-events: none; }
+.status { font-size: 12px; font-weight: 500; letter-spacing: .24em; text-transform: uppercase; color: var(--br); min-height: 1.5em; }
+.hint { font-size: 15px; line-height: 1.6; color: var(--iv2); }
+
+.play-foot { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; }
+.keys .chip, .drone { min-height: 48px; }
+
+.play .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+
+@media (hover: none) { .keys-hint { display: none; } }
+/* Touch: the canvas takes every gesture, so leave page above and below it to scroll by. */
+@media (pointer: coarse) { .bowl-table { max-height: 70vh; max-height: 70svh; min-height: 0; } }
+@media (max-width: 1099px) {
+  .stage { display: flex; flex-direction: column; gap: 16px; }
+  .table-copy { position: static; max-width: none; }
+}
+@media (max-width: 899px) { .bowl-table { aspect-ratio: 4 / 3; min-height: 0; } }
+@media (max-width: 639px) {
+  .play { gap: 22px; padding-top: 12px; }
+  .bowl-table { aspect-ratio: 20 / 23; }
+  .keys { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); width: 100%; gap: 6px; }
+  .keys .chip { padding: 0; }
+  .drone { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) { .chip { transition: none; } }
