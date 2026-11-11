@@ -52,6 +52,7 @@
 .rt-credit .rt-heart { display: inline-block; width: 1.15em; height: 1.15em; margin: 0 .25em; vertical-align: -.22em; }
 .rt-credit .rt-heart path { fill: var(--rt-heart); }
 .rt-credit .rt-sr { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; border: 0; }
+.rt-credit .rt-legal { margin: 10px 0 0; font-size: 11px; letter-spacing: .04em; color: var(--rt-muted); }
 @keyframes rt-spin { to { transform: rotate(-360deg); } }
 @media (prefers-reduced-motion: reduce) { .rt-credit .rt-blades { animation: none; } }
 @media (forced-colors: active) {
